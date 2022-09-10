@@ -1,0 +1,20 @@
+<p>form validation using modeldrivenform</p>
+<form [formGroup] = "dasform" (ngSubmit) = "sunna(dasform.value)" >
+    <label>email:</label>
+   <input type = "text"  name = "ema"  formControlName="emailid">
+   <br/>
+   <label>password:</label>
+   <input type = "password"  name="pass" formControlName = "passwd">
+   <br/>
+   
+   <input type = "submit"  value = "Log In">
+</form>
+
+<p *ngIf="!dasform.valid else valid">your input has an error</p>
+<ng-template #valid>
+ <p>success</p>
+</ng-template>
+
+<p>Email entered is : {{one}}</p>
+<p>Password is : {{two}}</p>
+

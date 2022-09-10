@@ -1,0 +1,10 @@
+<form #sun="ngForm" (ngSubmit)="vish(sun.value)">
+    <label>Username:</label>
+    <input type="text" name="username" placeholder="username" ngModel>
+    <label>password:</label>
+    <input type="password" name="password" placeholder="password" ngModel>
+    <input type="button" name="submit" value="submit" id="submit">
+</form>
+<p>username:{{user}}</p>
+<p>password:{{pword}}</p>
+

@@ -1,0 +1,12 @@
+<p>object works!</p>
+<p>{{name1}}</p>
+<p>{{user.name}}</p>
+<p>{{user.age}}</p>
+<p>{{user.designation[1]}}</p>
+<p *ngFor="let i of user.designation">{{i}}</p>
+<p *ngIf="user.designation.length>=1">
+    designation:<span *ngFor="let aa of user.designation">
+    {{aa}}
+    </span>
+</p>
+<p style="color: blue;">this is the result of service operation..{{datee}}</p>
