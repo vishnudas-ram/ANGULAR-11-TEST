@@ -31,6 +31,18 @@
           <span class="side-title" *ngIf="isSidebarOpened">FORMS</span>
         </div>
       </button>
+
+      <button class="sidebar-btn" fxLayout="row" [fxLayoutAlign]="isSidebarOpened ? 'start center' : 'center center'"
+      [ngClass]="{ 'padding-sidebar': isSidebarOpened == false }" (click)="sidebarClose()" routerLink="/detail/:id"  [routerLinkActive]="['router-link-active']">
+           <div class="button-div" flexLayout="row" [fxLayoutAlign]="isSidebarOpened ? 'start center' : 'center center'"
+        fxLayoutGap="10px">
+        <span>
+          <img src="../../../assets/chat.svg" alt="" class="side-Icon visible" />
+          <img src="../../../assets/calender-icon.svg" alt="" class="side-Icon active-visible" />
+        </span>
+        <span class="side-title" *ngIf="isSidebarOpened">DETAIL</span>
+      </div>
+    </button>
   
   
     </div>

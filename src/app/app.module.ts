@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsComponent } from './components/forms/forms.component';
     SideBarComponent,
     HeaderComponent,
     FormsComponent,
+    DetailComponent,
   
   ],
   imports: [

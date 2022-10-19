@@ -3,7 +3,8 @@ import { ApiConstant } from 'src/app/shared/apiConstant';
 import { ApiService } from 'src/app/services/api.service';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { GeneralService } from '../../services/general.service'
+import { GeneralService } from '../../services/general.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
   itemCount:number = 5;
   constructor(
     private apiService: ApiService,
-    private general:GeneralService
+    private general:GeneralService,
+    private router:Router
   ) { 
   
   }
@@ -48,6 +50,7 @@ export class HomeComponent implements OnInit {
   this.details.map((x)=>{
     if (x.id == data) {
       console.log('name : ',x.employee_name);
+      this.router.navigateByUrl(`/detail/${data}`);
     }
   })
  }
