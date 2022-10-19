@@ -1,17 +1,14 @@
-
-<nav>
-    <ul class="links">
-        <li><a class="active" href="/binding">binding</a></li>
-        <li><a href="/template">templatedriven</a></li>
-        <li><a href="/directive">directive</a></li>
-        <li><a href="/modeldriven">modeldrivenform</a></li>
-        <li><a href="/formvalid">formvalidation anglr</a></li>
-        <li><a href="/httpaccess">httpaccess</a></li>
-        <li><a href="/object">object</a></li>
-        <li><a href="/service">service</a></li>
-
-
-
-      </ul>
-</nav>
-<router-outlet></router-outlet>
+<div>
+  <div [ngClass]="{'open-sidebar': isSidebarOpened,'close-sidebar': !isSidebarOpened}" class="sidebarMenu">
+    <app-side-bar [isSidebarOpened]="isSidebarOpened" (sideOpenEvent)="sidebarEvent($event)">
+    </app-side-bar>
+  </div>
+  <div [ngClass]="{'open-menu': isSidebarOpened,'close-menu': !isSidebarOpened}" class="main full-height" fxLayout="column">
+    <div>
+      <app-header></app-header>
+    </div>
+      <div class="router-view-div full-height" >
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

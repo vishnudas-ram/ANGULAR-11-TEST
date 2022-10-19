@@ -1,0 +1,83 @@
+.sidebarMenu {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding: 15px;
+    z-index: 1000;
+  }
+  
+  .open-sidebar {
+    transition: 0.5s;
+    width: 280px !important;
+  }
+  
+  .open-menu {
+    margin-left: 101px;
+  }
+  
+  .close-sidebar {
+    width: 101px;
+    transition: 0.5s;
+  }
+  
+  .close-menu {
+    margin-left: 101px;
+  }
+  
+  .router-view-div {
+    // z-index:  !important;
+    padding: 30px 20px 30px 20px;
+    background-color: #fff;
+  }
+  
+  .main {
+    transition: margin-left .5s;
+  }
+  
+  @media (max-width: 600px) {
+    .router-view-div {
+      padding: 0px 0px 20px 0px;
+    }
+  
+    .sidebarMenu {
+      height: 100vh !important;
+      box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.13);
+      padding: 0px;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  
+    .open-sidebar {
+      transition: 0.5s;
+      width: 280px !important;
+    }
+  
+    .open-menu {
+      transition: 0.5s;
+      margin-left: 0px;
+    }
+  
+    .close-sidebar {
+      width: 0px;
+      box-shadow: none;
+      transition: 0.5s;
+    }
+  
+    .close-menu {
+      margin-left: 0px;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1800px) {
+    .open-sidebar {
+      width: 315px !important;
+    }
+  }

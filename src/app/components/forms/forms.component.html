@@ -1,0 +1,33 @@
+<div class="main" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="20px">
+    
+    <div class="form-div" [formGroup]="dataForm" fxLayout="column" fxLayoutGap="10px" >
+        <h4 class="heading">POST</h4>
+        <label>Name:</label>
+        <input type="text" formControlName="name">
+        <label>Salary:</label>
+        <input type="text" formControlName="salary">
+        <label>Age:</label>
+        <input type="text" formControlName="age">
+        <button (click)="postData(dataForm.value)">Click</button>
+    </div>
+
+    <div class="form-div-update" [formGroup]="updateForm" fxLayout="column" fxLayoutGap="10px" >
+        <h4 class="heading">UPDATE & DELETE</h4>
+        <label>Name:</label>
+        <input type="text" formControlName="name">
+        <label>Salary:</label>
+        <input type="text" formControlName="salary">
+        <label>Age:</label>
+        <input type="text" formControlName="age">
+        <label>Id:</label>
+        <input type="text" formControlName="id">
+        <label>Profile image:</label>
+        <input type="text" formControlName="profile">
+
+        <button (click)="updateData(updateForm.value)">Update</button>
+
+        <button (click)="deleteData()">Delete</button>
+
+    </div>
+
+</div>

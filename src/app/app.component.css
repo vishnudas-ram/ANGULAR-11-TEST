@@ -1,8 +1,0 @@
-.links {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    gap: 10px;
-    background-color: antiquewhite;
-    padding: 10px 3px;
-}

@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  /* background-color: #ffffff; */
+  font-family: "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif !important;
+  font-size: normal;
+}
+
+.material-icons {
+  font-family: "Material Icons" !important;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.full-height {
+  height: 100% !important;
+  overflow: auto;
+}
+
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.mat-dialog-container {
+  border-radius: 10px !important;
+  overflow: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mat-dialog-container::-webkit-scrollbar {
+  display: none;
+}
+
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
+mat-radio-button {
+  font-size: 18px !important;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1e1e1e !important;
+}
+
+
+
+.filter-icon {
+  cursor: pointer !important;
+}
+
+.profile-name {
+  white-space: nowrap !important;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0px;
+  padding-top: 4px;
+  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+

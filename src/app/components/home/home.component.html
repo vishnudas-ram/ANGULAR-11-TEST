@@ -1,0 +1,19 @@
+<div class="main-div" fxLayout="row wrap" fxLayoutGap="10px">
+  <div class="cards" fxLayout="column" fxLayoutGap="5px" *ngFor="let item of details">
+    <p>employee name: {{item?.employee_name}}</p>
+    <p>employee age: {{item?.employee_age}}</p>
+    <p>employee salary: {{item?.employee_salary}}</p>
+    <button (click)="onClick(item?.id)">click</button>
+  </div>
+</div>
+<button (click)="back()">back</button>
+<button (click)="next()">next</button>
+<br><br>
+<label>enter search word:</label>
+<input type="text" placeholder="search"[(ngModel)]="searchWord" (keyup)="searchByName()">
+<button>search</button>
+<p>{{searchWord}}</p>
+<br><br>
+<label>change profile name :</label>
+<input type="text" placeholder="enter new profile name" [(ngModel)]="userName" >
+<button (click)="changeProfileName()">submit</button>

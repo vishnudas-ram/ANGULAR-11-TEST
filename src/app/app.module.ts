@@ -3,39 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BindingComponent } from './binding/binding.component';
-import { TemplatefmComponent } from './templatefm/templatefm.component';
 import { FormsModule } from '@angular/forms';
-import { DirectivesComponent } from './directives/directives.component';
-import { ModeldrivenComponent } from './modeldriven/modeldriven.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormvalidAngComponent } from './formvalid-ang/formvalid-ang.component';
-import { HttpaccessComponent } from './httpaccess/httpaccess.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import { ObjectComponent } from './object/object.component';
-import {ServicesService} from './services.service';
-import { ServicesComponent } from './services/services.component';
+import { HomeComponent } from './components/home/home.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FormsComponent } from './components/forms/forms.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BindingComponent,
-    TemplatefmComponent,
-    DirectivesComponent,
-    ModeldrivenComponent,
-    FormvalidAngComponent,
-    HttpaccessComponent,
-    ObjectComponent,
-    ServicesComponent
+    HomeComponent,
+    SideBarComponent,
+    HeaderComponent,
+    FormsComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
-  providers: [ServicesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

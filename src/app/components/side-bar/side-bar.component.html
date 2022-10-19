@@ -1,0 +1,37 @@
+<div class="sidebar-main" (mouseenter)="expand(true)" (mouseleave)="expand(false)">
+
+    <div fxLayoutAlign="center center" style="padding: 20px 0px 50px 0px" fxHide.lt-sm>
+         <h4 style="color: rgb(132, 132, 193);" [ngClass]="{ 'open-sidelogo': isSidebarOpened }">DAS</h4>
+    </div>
+  
+    <div class="mobile-profile" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px" fxHide.gt-xs>
+  
+    </div>
+    <div fxLayout="column" fxLayoutGap="10px" style="margin-top: 10px">
+  
+      <button class="sidebar-btn" fxLayout="row" [fxLayoutAlign]="isSidebarOpened ? 'start center' : 'center center'"
+        (click)="sidebarClose()" routerLink="/home"  [routerLinkActive]="['router-link-active']">
+            <div class="button-div" flexLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span>
+            <img src="../../../assets/chat.svg" alt="" class="side-Icon visible" />
+            <img src="../../../assets/contact-us.svg" alt="" class="side-Icon active-visible" />
+          </span>
+          <span class="side-title" *ngIf="isSidebarOpened == true">HOME</span>
+        </div>
+      </button>
+  
+      <button class="sidebar-btn" fxLayout="row" [fxLayoutAlign]="isSidebarOpened ? 'start center' : 'center center'"
+        [ngClass]="{ 'padding-sidebar': isSidebarOpened == false }" (click)="sidebarClose()" routerLink="/forms"  [routerLinkActive]="['router-link-active']">
+             <div class="button-div" flexLayout="row" [fxLayoutAlign]="isSidebarOpened ? 'start center' : 'center center'"
+          fxLayoutGap="10px">
+          <span>
+            <img src="../../../assets/chat.svg" alt="" class="side-Icon visible" />
+            <img src="../../../assets/calender-icon.svg" alt="" class="side-Icon active-visible" />
+          </span>
+          <span class="side-title" *ngIf="isSidebarOpened">FORMS</span>
+        </div>
+      </button>
+  
+  
+    </div>
+  </div>

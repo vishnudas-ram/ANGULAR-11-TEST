@@ -1,0 +1,451 @@
+.sidebar-main {
+    height: 97.5vh;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    // box-shadow: 5px 0 50px 0 rgba(68, 82, 119, 0.25);
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0.6px #eee;
+    overflow: auto;
+    z-index: 9999 !important;
+
+    &:hover {
+        .sidebar-btn {
+            padding-left: 30px;
+        }
+    }
+}
+
+.sidebar-main::-webkit-scrollbar {
+    height: 0px;
+    width: 4px;
+}
+
+.sidebar-main::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #e0e0e0;
+    border-radius: 10px;
+    margin: 120px 0px 20px 0px;
+}
+
+.sidebar-main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #eeeded;
+}
+
+.active-visible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.sidebar-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: transparent;
+    outline: none !important;
+    text-align: center;
+    transition: 0.5s;
+    border-left: 5px solid #fff;
+    animation-name: sideBarButton;
+    animation-duration: 2s;
+    transition: background-color, margin-left;
+    transition-duration: 1s;
+    margin-left: 0px;
+
+    &:hover {
+        // .active-sidebar{
+        //     display:block;
+        // }
+        // .dummy-div{
+        //     display: none;
+        // }
+        background-color: #e2eeff;
+        border-left: 5px solid #004097;
+        margin-left: 5px;
+    }
+}
+
+@keyframes sideBarButton {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar-btn:focus {
+    outline: none !important;
+}
+
+.active-sidebar {
+    display: none;
+    width: 6px;
+    height: 44px;
+    // margin-left: -5px;
+    border-radius: 5px;
+    background-color: #004097;
+}
+
+.dummy-div {
+    display: block;
+    width: 6px;
+    height: 40px;
+}
+
+.side-Icon {
+    // margin-left: 15px;
+    width: 22px;
+    height: 22px;
+}
+
+.router-link-active {
+    background-color: #f5f6ff;
+    border-left: 5px solid #004097;
+
+    // .active-sidebar{
+    //     display:block;
+    // }
+    // .dummy-div{
+    //     display: none;
+    // }
+    .active-visible {
+        display: block;
+    }
+
+    .visible {
+        display: none;
+    }
+
+    .side-title {
+        color: #004097 !important;
+    }
+
+    background-color: #e2eeff;
+}
+
+.button-div {
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+
+    .side-title {
+        opacity: 1;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #b7b7b7;
+        white-space: nowrap;
+
+        &:hover {
+            color: #004097;
+        }
+    }
+
+    &:hover {
+
+        // .active-sidebar{
+        //     display:block;
+        // }
+        // .dummy-div{
+        //     display: none;
+        // }
+        .sidebar-btn {
+            background-color: #eeeded;
+        }
+
+        .active-visible {
+            display: block;
+        }
+
+        .visible {
+            display: none;
+        }
+
+        .side-title {
+            color: #004097;
+        }
+    }
+}
+
+.side-title-hide {
+    opacity: 0;
+
+    &:hover {
+
+        // .active-sidebar{
+        //     display:block;
+        // }
+        // .dummy-div{
+        //     display: none;
+        // }
+        .sidebar-btn {
+            background-color: #eeeded;
+        }
+
+        border-left: 5px solid #004097;
+    }
+}
+
+.button-div:focus {
+    outline: none !important;
+}
+
+.close-sidelogo {
+    width: 53px;
+    height: 18px;
+    margin-left: 11px;
+    transition: 0.5s;
+}
+
+.open-sidelogo {
+    width: 142px;
+    height: 25px;
+    //   margin-left: 30px;
+    transition: 0.5s;
+}
+
+//new style
+
+// .sidebar-main{
+//   background-color: #fff;
+//   height: 100%;
+//   width: 100%;
+//   box-shadow: 5px 0 50px 0 rgba(68, 82, 119, 0.25);
+//   border-radius: 8px;
+//   padding: 30px 0px 20px 0px;
+//   overflow: auto;
+//   &:hover{
+//     .sidebar-btn {
+//       padding-left: 30px;
+//     }
+//   }
+// }
+// .sidebar-main::-webkit-scrollbar {
+//   height: 0px;
+//   width: 4px;
+// }
+// .sidebar-main::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px #e0e0e0;
+//   border-radius: 10px;
+//   margin:120px 0px 20px 0px
+// }
+// .sidebar-main::-webkit-scrollbar-thumb {
+//   border-radius: 10px;
+//   background-color: #eeeded;
+// }
+
+// .close-sidelogo{
+//   width: 53px;
+//   height: 18px;
+//   margin-left: 11px;
+//   transition: 0.5s;
+// }
+
+// .open-sidelogo{
+//   width: 142px;
+//   height: 25px;
+//   margin-left: 30px;
+//   transition: 0.5s;
+// }
+
+// .sidebar-btn {
+//   width: 100%;
+//   height: 40px;
+//   border: none;
+//   background: transparent;
+//   outline: none !important;
+//   border-left:5px solid #fff ;
+//   .active{
+//     display: none;
+//   }
+//   .inactive{
+//     display: block;
+//   }
+//   cursor: pointer;
+//   .side-Icon{
+//     width: 20px;
+//     height: 20px;
+//   }
+//   .side-title{
+//     margin-left: 13px;
+//     font-size: 16px;
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: 1.45;
+//     letter-spacing: 0.6px;
+//     text-align: left;
+//     color: #343434;
+//     white-space: nowrap;
+//   }
+//   &:hover{
+//       border-left:5px solid #363a9b ;
+//       background-color: #f5f6ff;
+//       .side-title{
+//         color: #363a9b;
+//       }
+//       .active{
+//         display: block;
+//       }
+//       .inactive{
+//         display: none;
+//       }
+//   }
+//   &:focus{
+//     outline: none;
+//   }
+// }
+// .side-link-active{
+//   background-color: #f5f6ff;
+//   border-left:5px solid #363a9b ;
+//   .side-title{
+//     color: #363a9b;
+//   }
+//   .active{
+//     display: block;
+//   }
+//   .inactive{
+//     display: none;
+//   }
+// }
+
+@media screen and (max-width: 600px) {
+    .sidebar-main {
+        overflow: auto;
+        border-radius: 0px;
+        box-shadow: none;
+        z-index: 1000;
+        height: 100vh;
+    }
+
+    .mobile-profile {
+        padding: 30px 10px 20px 10px;
+        margin-bottom: 30px;
+        border-bottom: solid 0.5px #c7c7c7;
+    }
+
+    .prifile-image {
+        height: 49px;
+        width: 49px;
+        padding: 4px 4px 4px 4px;
+        border-radius: 50%;
+        background-image: linear-gradient(137deg, #a067b5 4%, #3b92ea 95%);
+    }
+
+    .user-image {
+        height: 44px;
+        width: 43px;
+        border-radius: 50%;
+        border: solid 1px #fff;
+    }
+
+    .username {
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 0.48px;
+        text-align: left;
+        color: #303030;
+    }
+
+    .side-Icon {
+        margin-left: 45px;
+        width: 17px;
+        // height: 20px;
+    }
+
+    .button-div {
+        height: fit-content;
+        width: fit-content;
+        cursor: pointer;
+
+        .side-title {
+            font-size: 16px;
+        }
+
+        &:hover {
+            .active-sidebar {
+                display: none;
+            }
+
+            .dummy-div {
+                display: none;
+            }
+        }
+    }
+
+    .sidebar-btn {
+        .active-sidebar {
+            display: none;
+        }
+
+        .dummy-div {
+            display: none;
+        }
+    }
+
+    .router-link-active {
+        .active-sidebar {
+            display: none;
+        }
+
+        .dummy-div {
+            display: none;
+        }
+    }
+}
+
+// @media (max-width:420px) {
+//     .sidebar-btn {
+//         padding: 10px 0px 10px 32%;
+//     }
+//     .padding-sidebar {
+//         transition: .5s;
+//         padding: 10px 0px 10px 18px;
+//     }
+// }
+@media screen and (min-width: 1800px) {
+    .open-sidelogo {
+        width: 162px;
+        height: 30px;
+        transition: 0.5s;
+    }
+
+    .side-Icon {
+        width: 20.8px;
+        height: 23.1px;
+    }
+
+    .sidebar-btn {
+        .side-title {
+            font-size: 20px;
+            letter-spacing: 0.6px;
+        }
+    }
+}
+
+.badge {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: #ef5300;
+    top: -2px;
+    right: -2px;
+    border-radius: 50%;
+}
